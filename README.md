@@ -121,3 +121,53 @@ La aplicación incluye funciones de testing:
 Para activar testing: presiona el botón "🧪 Simular SMS"
 
 ## 📁 Estructura del proyecto
+
+
+
+
+
+## 🐛 Troubleshooting
+
+### Problemas comunes:
+
+**Error de permisos POST_NOTIFICATIONS en API 28:**
+- Este permiso NO existe en API 28 (Android 9.0)
+- Elimina `<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />` del AndroidManifest.xml
+- Elimina `Manifest.permission.POST_NOTIFICATIONS` del array de permisos en MainActivity.java
+
+**Error de PendingIntent.FLAG_IMMUTABLE en API 28:**
+- Esta flag no existe en API 28
+- Usa solo `PendingIntent.FLAG_UPDATE_CURRENT`
+- No combines con FLAG_IMMUTABLE
+
+**No se reciben notificaciones:**
+- Verifica que los permisos estén concedidos
+- Revisa que el número esté en la lista de monitoreo
+- Comprueba los logs en Logcat
+
+**La app no funciona en Android 10+:**
+- Asegúrate de manejar permisos en tiempo de ejecución
+- Verifica configuración de Background App Refresh
+
+**Números no se guardan:**
+- Verifica formato del número de teléfono
+- Comprueba logs de SharedPreferences
+
+## 📝 Respuestas a preguntas de reflexión
+
+### 🔋 Integración con servicios del dispositivo:
+
+Las aplicaciones pueden integrarse con servicios del dispositivo de manera eficiente mediante:
+
+1. **Gestión de permisos:** Implementar solicitud de permisos en tiempo de ejecución (API 23+)
+2. **BroadcastReceivers:** Escuchar eventos del sistema de forma reactiva
+3. **Servicios en segundo plano:** Usar WorkManager para tareas diferidas
+4. **Optimización de batería:** Implementar Doze mode y App Standby compatibility
+
+**Ejemplo en la app:**
+```java
+// Solicitud de permisos en tiempo de ejecución
+if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS)
+    != PackageManager.PERMISSION_GRANTED) {
+    ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE);
+}
