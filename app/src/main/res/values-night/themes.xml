@@ -3,5 +3,11 @@
     <style name="Base.Theme.Actividad8" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorOnSurface">@color/flying</item>
+        <item name="colorOnBackground">@color/ground</item>
+        <item name="colorOnPrimary">@color/dark</item>
+        <item name="colorOnSecondary">@color/fire</item>
+        <item name="colorOnTertiary">@color/electric</item>
+        <item name="colorSurface">@color/fighting</item>
     </style>
 </resources>

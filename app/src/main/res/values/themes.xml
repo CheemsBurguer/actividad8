@@ -3,6 +3,13 @@
     <style name="Base.Theme.Actividad8" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorOnSurface">@color/steel</item>
+        <item name="colorOnBackground">@color/fairy</item>
+        <item name="colorOnPrimary">@color/normal</item>
+        <item name="colorOnSecondary">@color/psychic</item>
+        <item name="colorOnTertiary">@color/details2</item>
+        <item name="colorSurface">@color/details1</item>
+
     </style>
 
     <style name="Theme.Actividad8" parent="Base.Theme.Actividad8" />
