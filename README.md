@@ -20,3 +20,104 @@
 ## 📱 Funcionalidades
 
 [Lista de características implementadas]
+
+
+
+
+
+----------------------------------------------------------------
+
+
+
+
+# 📱 Actividad 8 - App de Notificaciones SMS
+
+## 📋 Descripción
+
+Aplicación Android que monitorea mensajes SMS de números específicos y envía notificaciones usando Broadcast Receivers. Desarrollada como parte del curso de Desarrollo de Aplicaciones Móviles.
+
+## 🎯 Objetivos de aprendizaje
+
+-  ✅ Integración con servicios del dispositivo (SMS)
+-  ✅ Implementación de Broadcast Receivers
+-  ✅ Manejo eficiente de hilos en Android
+-  ✅ Gestión de permisos en tiempo de ejecución
+-  ✅ Diseño de interfaces responsivas
+
+## 🛠️ Tecnologías utilizadas
+
+-  **Android SDK:** API 28 (Android 9.0)
+-  **Lenguaje:** Java
+-  **Componentes:** Broadcast Receivers, Notification Manager
+-  **UI:** Material Design Components
+-  **Almacenamiento:** SharedPreferences
+
+## ⚠️ Notas importantes para API 28
+
+### Diferencias con versiones más recientes:
+
+-  **POST_NOTIFICATIONS**: Este permiso NO existe en API 28, se introdujo en API 33
+-  **PendingIntent.FLAG_IMMUTABLE**: No disponible en API 28, usar solo FLAG_UPDATE_CURRENT
+-  **Notificaciones**: Funcionan sin permisos especiales en API 28
+-  **BroadcastReceiver**: Funciona normalmente para SMS en API 28
+
+## 📱 Funcionalidades
+
+### ✅ Implementadas:
+
+-  [x] Lista dinámica de números de teléfono a monitorear
+-  [x] Agregar/eliminar números de la lista
+-  [x] BroadcastReceiver para interceptar SMS
+-  [x] Notificaciones Toast para feedback inmediato
+-  [x] Notificaciones del sistema para alertas
+-  [x] Logging detallado para debugging
+-  [x] Validación de números de teléfono
+-  [x] Persistencia de datos con SharedPreferences
+-  [x] Manejo de permisos en tiempo de ejecución
+
+### 🎨 Diseño:
+
+-  [x] Paleta de colores temática (comunicación/alerta)
+-  [x] Fuente personalizada (Roboto)
+-  [x] Interfaz siguiendo Material Design
+-  [x] Componentes responsivos
+
+## 🔧 Instalación y configuración
+
+### Prerrequisitos:
+
+-  Android Studio 4.0+
+-  SDK mínimo: API 28
+-  Dispositivo Android o emulador con API 28+
+
+### Pasos:
+
+1. Clona este repositorio
+2. Abre el proyecto en Android Studio
+3. Sincroniza Gradle
+4. Ejecuta en dispositivo/emulador
+5. Concede permisos de SMS cuando se soliciten
+
+## 🚀 Uso de la aplicación
+
+1. **Agregar números:** Ingresa un número y presiona "Agregar Número"
+2. **Monitoreo:** La app monitoreará SMS de los números agregados
+3. **Notificaciones:** Recibirás alertas cuando lleguen SMS monitoreados
+4. **Gestión:** Elimina números deslizando o presionando el botón eliminar
+
+## 🔒 Permisos necesarios
+
+-  `RECEIVE_SMS`: Para interceptar mensajes entrantes
+-  `READ_SMS`: Para leer contenido de mensajes
+
+## 🧪 Testing
+
+La aplicación incluye funciones de testing:
+
+-  Simulación de SMS para pruebas
+-  Validación de números de teléfono
+-  Logging detallado en Logcat
+
+Para activar testing: presiona el botón "🧪 Simular SMS"
+
+## 📁 Estructura del proyecto
