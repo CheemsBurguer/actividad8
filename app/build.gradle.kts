@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.pougang.actividad8"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.pougang.actividad8"
