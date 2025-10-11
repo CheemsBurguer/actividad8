@@ -65,16 +65,17 @@
         android:padding="8dp" />
 
     <!-- Botón de testing (solo para desarrollo) -->
+
+    <!-- Estado del monitoreo -->
     <Button
         android:id="@+id/btnTest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/simular_sms"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/fire"
+        android:text="@string/simular_sms"
         android:textColor="@color/steel" />
 
-    <!-- Estado del monitoreo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 package com.pougang.actividad8;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity
     private static final String KEY_PHONE_NUMBERS = "monitored_numbers";
 
     private EditText etPhoneNumber;
-    private Button btnAddNumber;
+    private Button btnAddNumber, btnTest;
     private RecyclerView rvPhoneNumbers;
     private TextView tvStatus;
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity
         setupClickListeners();
         loadSavedNumbers();
         checkPermissions();
+        setupTestBttn(this);
     }
 
     private void initializeViews() {
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         btnAddNumber = findViewById(R.id.btnAddNumber);
         rvPhoneNumbers = findViewById(R.id.rvPhoneNumbers);
         tvStatus = findViewById(R.id.tvStatus);
-
+        btnTest = findViewById(R.id.btnTest);
         preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
     }
 
@@ -178,5 +180,9 @@ public class MainActivity extends AppCompatActivity
             tvStatus.setText("🔴 Permisos Requeridos");
             tvStatus.setTextColor(getResources().getColor(R.color.details2));
         }
+    }
+
+    private void setupTestBttn(Context context){
+        btnTest.setOnClickListener(v -> TestHelper.simulateSMS(context, "+525513323420", "Soy omelo chino"));
     }
 }
