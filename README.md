@@ -23,7 +23,20 @@ cuando se reciban SMS de estos números.
 [Lista de características implementadas]
 
 
+## 📝 Respuestas a preguntas de reflexión
 
+
+🔋 Integración con servicios del dispositivo: ¿Cómo se pueden desarrollar aplicaciones que se integren con los servicios del dispositivo, como la batería, los mensajes o las notificaciones, de forma eficiente y segura, considerando diferentes tipos de servicios, permisos y la experiencia del usuario?
+
+📡 Broadcast Intents y Receivers: ¿Cómo se pueden utilizar Broadcast Intents y Broadcast Receivers para comunicar diferentes aplicaciones entre sí de forma segura y eficiente, considerando diferentes tipos de acciones, datos y la experiencia del usuario?
+
+🧵 Manejo de hilos: ¿Cómo se pueden utilizar hilos en Android para mejorar la eficiencia y la capacidad de respuesta de una aplicación, considerando diferentes tipos de tareas, la sincronización de datos y la experiencia del usuario?
+
+💭 Reflexión personal: Escribe una reflexión personal sobre los conceptos aprendidos (mínimo 50 palabras). Incluye:
+
+Desafíos enfrentados durante el desarrollo
+Conceptos que te resultaron más interesantes
+Aplicaciones prácticas en proyectos futuros
 
 
 ----------------------------------------------------------------
@@ -154,7 +167,7 @@ Para activar testing: presiona el botón "🧪 Simular SMS"
 - Verifica formato del número de teléfono
 - Comprueba logs de SharedPreferences
 
-## 📝 Respuestas a preguntas de reflexión
+
 
 ### 🔋 Integración con servicios del dispositivo:
 
