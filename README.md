@@ -2,7 +2,8 @@
 
 ## 📋 Descripción
 
-[Descripción breve del proyecto]
+Aplicación que permite monitorear números telefónicos y mandar notificaciones al usuario
+cuando se reciban SMS de estos números.
 
 ## 🎯 Objetivos de aprendizaje
 
